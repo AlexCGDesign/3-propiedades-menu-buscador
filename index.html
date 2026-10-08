@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buscador con popover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+
+
+    <!-- Botón de buscar -->
+    <button class="search-btn" popovertarget="palette"
+    >
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      Buscar
+    </button>
+
+    
+    <!-- Buscador -->
+    <section class="palette" id="palette" popover>
+      <search class="palette__search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <!-- ★ autofocus: recibe el foco al abrirse -->
+        <input type="search" autofocus placeholder="Escribe un comando o busca…">
+        <kbd>esc</kbd>
+      </search>
+
+      <section>
+        <h2>Sugerencias</h2>
+        <ul class="palette__list">
+          <li>
+            <button popovertarget="palette" popovertargetaction="hide">
+              <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              Crear nuevo short
+              <kbd>⌘N</kbd>
+            </button>
+          </li>
+          <li>
+            <button popovertarget="palette" popovertargetaction="hide">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              Abrir biblioteca de componentes
+            </button>
+          </li>
+          <li>
+            <button popovertarget="palette" popovertargetaction="hide">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+              Cambiar tema
+              <kbd>⌘T</kbd>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+    </section>
+
+
+  </main>
+</body>
+</html>
