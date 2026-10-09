@@ -149,6 +149,8 @@ kbd {
 .palette__list--files button { font: .84rem var(--mono); }
 
 
+/* Animación */
+
 
 .palette{
 
@@ -166,6 +168,8 @@ kbd {
   &:popover-open{
     opacity: 1;
     transform: unset;
+    transition-delay:unset;
+
 
     @starting-style{
       opacity: 0;
@@ -175,3 +179,21 @@ kbd {
   }
 
 }
+
+
+
+.palette__list li{
+  transition-property: transform, opacity;
+  transition-duration: .3s;
+  transition-delay:  calc( sibling-index() * .3s );
+
+  opacity: 1;
+  transform: translate(0);
+
+
+  @starting-style{
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
